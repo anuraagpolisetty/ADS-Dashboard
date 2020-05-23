@@ -7,20 +7,22 @@ library("shiny")
 # adsCenterData@gmail.com
 # Password: Kingcounty1
 
-# You want to deploy an app in Shinyapps.io or other server
-# FIRST STEP----
-# Get the token an store it in a cache folder embedded in your app directory
-# designate project-specific cache
-# options(gargle_oauth_cache = ".secrets")
-options(gargle_quiet = FALSE) # So you can know what is happening
-# Authenticate in interactive mode (run the app) ONCE and check if the token 
-# has been stored inside the .secrets folder, after that just comment this line
-# drive_auth() # Authenticate to produce the token in the cache folder (comment after generating)
-# Grant permission to googlesheets to access to the token produced
-# gs4_auth(token = drive_token()) #(comment after authenticated)
+# After downloading this directory, follow the steps below to authenticate the correct google account.
+# Run each line specified by moving your cursor to the line and pressing 'Ctrl + Enter'
 
-# SECOND STEP----
-# Comment lines 14, 18 and 20 and uncomment lines 27 and 28
+########### STEP ONE 
+# Declare a folder '.secrets' to store the token in
+options(gargle_oauth_cache = ".secrets") # 
+# options(gargle_quiet = FALSE) # So you can know what is happening
+
+########### STEP TWO
+# Generate a token to store inside the '.secrets' folder
+# drive_auth() # Authenticate to produce the token in the cache folder (comment after generating)
+# Set googlesheets to access to the same token produced
+# gs4_auth(token = drive_token()) #(comment after authenticating)
+
+########### STEP THREE
+# Comment lines 20 and 22 and uncomment lines 29 and 30
 # You tell gargle to search the token in the secrets folder and to look
 # for an auth given to a certain email (enter your email linked to googledrive!)
 # drive_auth(cache = ".secrets", email = "adscenterdata@gmail.com")
@@ -46,10 +48,6 @@ options(
 # Test if your app runs properly in the local version
 # Authenticate in ShinyApps.io
 # rsconnect::setAccountInfo(name="<ACCOUNT>", token="<TOKEN>", secret="<SECRET>")
-# setwd() in your App directory
-# library(rsconnect)
-# deployApp()
-# Enjoy your new App!!
 
 
 

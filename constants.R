@@ -41,6 +41,7 @@ answers <<- c("Almost Never", "Sometimes", "Most of the Time", "Not applicable")
 sectors <<- c('Social', 'Physical', 'Positivity', 'Services', 'Independence', 'Overall')
 index <<- c('SocialIndex', 'PhysicalIndex', 'PositiveIndex', 'ServicesIndex', 'IndependenceIndex', 'OverallIndex')
 
+# Same as above, change the income brackets by changing this list of choices
 income_brackets <<- c("Very Low: Less than $18550 for 1 person; or $21,2000 for 2 people",
                      "Low: Less for than $30,900 for 1 person; or $35,300 for 2 people",
                      "Moderate: Less than $44,750 for 1 person; or $51,150 for 2 people",
