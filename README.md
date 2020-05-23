@@ -20,14 +20,14 @@ Watch these videos to understand how to use the dashboard and access the survey 
 * Using the dashboard [Tabitha your video goes here]
 * Submitting a survey and viewing the results: [Survey walk-through](https://youtu.be/3fNGA_zPH_Q)
 
-## Getting the information
+## Downloading app files
 To get the files on to your computer, you need to clone our repository. Here is a good step-by-step process of how to get this loaded to your desktop:
 
 * https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop
 
 
 ## Download the necessary programs
-If you decide to add or remove any Senior Centers, you will need to download R and RStudio. 
+If you decide to add or remove any Senior Centers, you will need to download R and RStudio and modify the code. 
 Download R for Windows [here](https://cran.r-project.org/bin/windows/base/) *OR* R for MacOS [here](https://cran.r-project.org/bin/macosx/).
 
 Download Rstudio [here](https://rstudio.com/products/rstudio/download/) and download the free version. This is what you can use to easily open up R files.
@@ -38,8 +38,6 @@ If you would like to change or update any information, such as adding a new seni
 
 ### Bigger Changes (More coding experience needed)
 If you would like to change more specific elements such as the layout of UI elements, please contact one of the developers before proceeding. If you feel that you have enough knowledge of R or CSS, you can make changes in the **style.css** file in the "*www*" folder.
-
-
 
 
 ## Republishing the App
@@ -60,7 +58,7 @@ or use this video to follow along with my video of making a change to a center h
     + Login: adscenterdata@gmail.com
     + <details> 
         <summary>Password:</summary>
-            A1: JavaScript 
+            A1: Kingcounty1 
         </details>
     + Click the accounts image icon in the top right corner and select Tokens
     + Click the Show button and then the Show Secret button
