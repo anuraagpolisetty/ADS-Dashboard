@@ -47,7 +47,7 @@ function(input, output, session) {
                        collapsible = TRUE,
                        closable = FALSE,
                        column(
-                         width=12,
+                         width=11,
                          plotlyOutput(paste0(gsub(' ', '', centers[k]), '_timeplot')) %>% 
                             withSpinner(type = 3, color="lightgreen", color.background = "#fff"))
                        ),
@@ -57,12 +57,13 @@ function(input, output, session) {
                        collapsible=TRUE,
                        closable=FALSE,
                        column(
-                         width = 12,
+                         width = 11,
                          plotlyOutput(paste0(gsub(' ', '', centers[k]), '_bar')) %>% 
                            withSpinner(type = 3, color="lightgreen", color.background = "#fff"))
                        )
                    ),
                    column(
+                     id = "Index-container",
                      width= 4,
                      bs4Card(inputId = 'Indices',
                              title = 
@@ -71,7 +72,7 @@ function(input, output, session) {
                                            choices = cleaned_data %>% filter(SiteID == centers[k]) %>% group_by(Batch) %>% summarise(count = n()) %>% pull(Batch)), 
                              closable=FALSE,
                              collapsible = FALSE,
-                             width=10,
+                             width = 10,
                              column(
                                width = 10,
                                plotlyOutput(paste0("Social_", gsub(' ', '', centers[k]))) %>% 

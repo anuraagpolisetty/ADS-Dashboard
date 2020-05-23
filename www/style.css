@@ -553,8 +553,7 @@
                       color: #212529
                   }
                   
-                  /* #SingleCenters g.gauge-outline path {
-                      stroke: white !important;
-                  } */
-                    
+                  #Indices .svg-container {
+                      transform: translate(-55px)
+                  }
                     
