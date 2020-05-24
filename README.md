@@ -20,6 +20,9 @@ Watch these videos to understand how to use the dashboard and access the survey 
 * Using the dashboard [Tabitha your video goes here]
 * Submitting a survey and viewing the results: [Survey walk-through](https://youtu.be/3fNGA_zPH_Q)
 
+
+
+
 # How to make changes
 > Carlos if you're reading this, it's probably for you
 
@@ -40,17 +43,17 @@ To get the R files on to your computer, you have two options:
 
 2. __Downloading the files directly from Google Drive__: This method is simple and doesn't require much technical skills to download. Follow the step-by-step guide here: 
 
-Go to app in drive folder
-![](imgs/App_in_drive_folder.png)
+### Log into Google Drive with adscenterdata@gmail.com and navigate to My Drive.Find the 'app' folder and right click on it to download as a zip file.
+<img src="imgs/App_in_drive_folder.png" width="500px">
 
-Unzip files
-![](imgs/Unzip_files.png)
+### From the 'Extract' menu on the top click on 'Extract all' and choose the location for the contents of the zip file to be saved in.
+<img src="imgs/Unzip_files.png" width="500px">
 
-3 Main files
-![](imgs/3_main_files.png)
+### 3 Main files
+<img src="imgs/3_main_files.png" width="500px">
 
-Change constants
-![](imgs/change_constants)
+### Change constants
+<img src="imgs/change_constants.png" width="500px">
 
 
 
