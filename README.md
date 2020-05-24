@@ -64,6 +64,7 @@ If you would like to change or update any information, such as adding a new seni
 
 ### Change constants
 You should see the following workspace:
+
 <img src="imgs/change_constants.png" width="600px">
 If you would like to add a senior center, look at (1) and delete the '#' symbol. Change the words 'New_center' with whatever center you would like to add. 
 
