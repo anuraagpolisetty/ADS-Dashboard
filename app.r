@@ -1,3 +1,5 @@
+# In RStudio, click on 'Run App' on the top right in order to run the app
+# in a test version in your own browser. 
 library(shiny)
 library(dplyr)
 library(ggplot2)

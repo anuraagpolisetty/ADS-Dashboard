@@ -1,6 +1,7 @@
 # Server used to host the application. 
 # Creates the plots displayed to the user and considers user input. 
-
+# In RStudio, click on 'Run App' on the top right in order to run the app
+# in a test version in your own browser. 
 library(plotly)
 library(shiny)
 library(ggplot2)

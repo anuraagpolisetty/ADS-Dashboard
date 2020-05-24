@@ -20,17 +20,40 @@ Watch these videos to understand how to use the dashboard and access the survey 
 * Using the dashboard [Tabitha your video goes here]
 * Submitting a survey and viewing the results: [Survey walk-through](https://youtu.be/3fNGA_zPH_Q)
 
-## Downloading app files
-To get the files on to your computer, you need to clone our repository. Here is a good step-by-step process of how to get this loaded to your desktop:
+# How to make changes
+> Carlos if you're reading this, it's probably for you
 
-* https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop
+If you would like to download the source code and make changes such as adding or changing senior centers, follow these step-by-step instructions.
 
 
-## Download the necessary programs
-If you decide to add or remove any Senior Centers, you will need to download R and RStudio and modify the code. 
-Download R for Windows [here](https://cran.r-project.org/bin/windows/base/) *OR* R for MacOS [here](https://cran.r-project.org/bin/macosx/).
+## First, download the necessary code editing programs
+The entire app is written using a coding language called _R_. If you decide to add or remove any Senior Centers, you will need to download R _AND_ RStudio (a coding editor) and modify the code. 
+* Download R for Windows [here](https://cran.r-project.org/bin/windows/base/) *OR* R for MacOS [here](https://cran.r-project.org/bin/macosx/).
 
-Download Rstudio [here](https://rstudio.com/products/rstudio/download/) and download the free version. This is what you can use to easily open up R files.
+* Download Rstudio [here](https://rstudio.com/products/rstudio/download/) and download the free version. This is what you can use to easily open up R files.
+
+## Download the app files
+To get the R files on to your computer, you have two options: 
+1. __Cloning the repository from Github__: This requires more technical skills such as using Git and the command terminal, but if you would like to do it, here is a good step-by-step process of how to get this loaded to your desktop:
+
+> * https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop
+
+2. __Downloading the files directly from Google Drive__: This method is simple and doesn't require much technical skills to download. Follow the step-by-step guide here: 
+
+Go to app in drive folder
+![](imgs/App_in_drive_folder.png)
+
+Unzip files
+![](imgs/Unzip_files.png)
+
+3 Main files
+![](imgs/3_main_files.png)
+
+Change constants
+![](imgs/change_constants)
+
+
+
 
 ## Adding/changing information
 ### Smaller Changes (Minimal Coding Experience)
@@ -46,6 +69,9 @@ When a change is made in the **constants.R** file, the page will need to be re-d
 Follow along this Youtube video to help with the deployment process: https://www.youtube.com/watch?v=ZKWLfW4zBYs
 
 or use this video to follow along with my video of making a change to a center here: https://www.youtube.com/watch?v=oCdbAPjAEz8&t=37s
+
+Publish
+![](imgs/publishing.png)
 
 1. In the top right corner of these files, there should be a round bluish icon. When you click on the arrow to its right, the click the Publish Application button. 
 2. It will then prompt you to install the required packages needed to publish. Click Yes.
