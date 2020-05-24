@@ -35,7 +35,7 @@ The entire app is written using a coding language called _R_. If you decide to a
 
 * Download Rstudio [here](https://rstudio.com/products/rstudio/download/) and download the free version. This is what you can use to easily open up R files.
 
-## Download the app files
+## Second, download the app files
 To get the R files on to your computer, you have two options: 
 1. __Cloning the repository from Github__: This requires more technical skills such as using Git and the command terminal, but if you would like to do it, here is a good step-by-step process of how to get this loaded to your desktop:
 
@@ -43,24 +43,31 @@ To get the R files on to your computer, you have two options:
 
 2. __Downloading the files directly from Google Drive__: This method is simple and doesn't require much technical skills to download. Follow the step-by-step guide here: 
 
-### Log into Google Drive with adscenterdata@gmail.com and navigate to My Drive.Find the 'app' folder and right click on it to download as a zip file.
-<img src="imgs/App_in_drive_folder.png" width="500px">
+### Log into Google Drive 
+Log in with adscenterdata@gmail.com and navigate to My Drive. Find the 'app' folder and right click on it to download as a zip file.
+<img src="imgs/App_in_drive_folder.png" width="600px">
 
-### From the 'Extract' menu on the top click on 'Extract all' and choose the location for the contents of the zip file to be saved in.
-<img src="imgs/Unzip_files.png" width="500px">
-
-### 3 Main files
-<img src="imgs/3_main_files.png" width="500px">
-
-### Change constants
-<img src="imgs/change_constants.png" width="500px">
-
-
+### Unzip files
+From the 'Extract' menu on the top click on 'Extract all' (1) and choose the location for the contents of the zip file to be saved in. Click on 'Extract' (2). 
+<img src="imgs/Unzip_files.png" width="600px">
 
 
 ## Adding/changing information
-### Smaller Changes (Minimal Coding Experience)
+Once extracted, you should be able to open the folder and see all the source code for the dashboard.
+The only files you need are are _constants.R_, _server.R_, and _ui.R_. Right-click and say "Open With" Rstudio. 
+<img src="imgs/3_main_files.png" width="600px">
+
+
+### Small Changes (Minimal Coding Experience)
 If you would like to change or update any information, such as adding a new senior center, adding new survey questions, or changing the income brackets, you need to edit the **constants.R** file. Open this file in RStudio or a similar code editor and see instructions within the file as to how to make these changes. 
+
+
+### Change constants
+You should see the following workspace:
+<img src="imgs/change_constants.png" width="600px">
+If you would like to add a senior center, look at (1) and delete the '#' symbol. Change the words 'New_center' with whatever center you would like to add. 
+
+Follow along with my video of making a change to a center here: [Link](https://www.youtube.com/watch?v=oCdbAPjAEz8)
 
 ### Bigger Changes (More coding experience needed)
 If you would like to change more specific elements such as the layout of UI elements, please contact one of the developers before proceeding. If you feel that you have enough knowledge of R or CSS, you can make changes in the **style.css** file in the "*www*" folder.
@@ -71,10 +78,10 @@ When a change is made in the **constants.R** file, the page will need to be re-d
 
 Follow along this Youtube video to help with the deployment process: https://www.youtube.com/watch?v=ZKWLfW4zBYs
 
-or use this video to follow along with my video of making a change to a center here: https://www.youtube.com/watch?v=oCdbAPjAEz8&t=37s
+or use this video for how to specifically publish the ADS Dashboard: https://youtu.be/oCdbAPjAEz8?t=59
 
 Publish
-![](imgs/publishing.png)
+<img src="imgs/publishing.png" width="500px">
 
 1. In the top right corner of these files, there should be a round bluish icon. When you click on the arrow to its right, the click the Publish Application button. 
 2. It will then prompt you to install the required packages needed to publish. Click Yes.
