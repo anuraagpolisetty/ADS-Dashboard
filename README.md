@@ -93,23 +93,20 @@ or use this video for how to publish this app specifically to the ADS Dashboard:
 2. It will then prompt you to install the required packages needed to publish. Click Yes.
 3. Next a Publish to Server pop up will appear. Here you will click the Add New Account link in the top right part of the screen.
 4. Pick the ShinyApps.io
-5. Now we must get the secret key to plug into the text box. Here you can follow the steps below, or try the already generated key 
-<details>
-  <summary>here:</summary>
-    (rsconnect::setAccountInfo(name='adscenters',
+5. Now we must get the secret key to paste into the text box. Here you can follow the steps below, or try the already generated <details> <summary>key:</summary> (rsconnect::setAccountInfo(name='adscenters',
 			  token='7557947F76FE11F9A4ED09991C85B528',
-			  secret='4am+/2rBfNN1r/pXDgHAjsEsGTn0eUCA9M5NPkv9'))
-</details>
-6.  + Log into shinyapps.io
-    + Login: adscenterdata@gmail.com
-    + <details> 
+			  secret='4am+/2rBfNN1r/pXDgHAjsEsGTn0eUCA9M5NPkv9'))</details>
+
+6.  * Log into shinyapps.io
+    * Login: adscenterdata@gmail.com
+    * <details> 
         <summary>Password:</summary>
             A1: Kingcounty1 
         </details>
-    + Click the accounts image icon in the top right corner and select Tokens
-    + Click the Show button and then the Show Secret button
-    + Copy and paste the _entire_ rsconnect function into the text box given on the RStudio and click Connect Account
-    + Click on the newly added account and press publish.
+    * Click the accounts image icon in the top right corner and select Tokens
+    * Click the Show button and then the Show Secret button
+    * Copy and paste the _entire_ rsconnect function into the text box given on the RStudio and click Connect Account
+    * Click on the newly added account and press publish.
   
 
 
