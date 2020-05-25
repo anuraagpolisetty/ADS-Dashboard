@@ -115,14 +115,6 @@ or use this video for how to publish this app specifically to the ADS Dashboard:
     * Click on the newly added account and press publish.
     
 After about 5 minutes, the app should be published with all the changes you have made and will open up in the browser window when finished. 
-			  secret='4am+/2rBfNN1r/pXDgHAjsEsGTn0eUCA9M5NPkv9')): 
-    + Log into shinyapps.io
-    + Login: adscenterdata@gmail.com
-    + Password: Kingcounty1
-    + Click the accounts image icon in the top right corner and select Tokens
-    + Click the Show button and then the Show Secret button
-    + Copy and paste the _entire_ rsconnect function into the text box given on the RStudio and click Connect Account
-    + Click on the newly added account and press publish.
     
 Once the page has been published, the url will remain the same as long as you designate the title to be dashboard. If not, the url will differ with the title change:
 
