@@ -85,6 +85,8 @@ Follow along this online video for a tutorial to help with the deployment proces
 
 or use this video for how to publish this app specifically to the ADS Dashboard: https://youtu.be/oCdbAPjAEz8?t=59
 
+Side-note: If you want to see your changes, but don't want to actually publish the version to the online site, you can click on the "Run App" button on the top right of the 'server.R' file. It should launch the app in the browser directly so that only you can see your changes. 
+
 ### Publish
 
 <img src="imgs/publishing.png" width="500px">
