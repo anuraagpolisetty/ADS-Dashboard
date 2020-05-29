@@ -49,7 +49,7 @@ Log in with adscenterdata@gmail.com and navigate to My Drive. Find the 'app' fol
 <img src="imgs/App_in_drive_folder.png" width="600px">
 
 ### Unzip files
-From the 'Extract' menu on the top click on 'Extract all' (1) and choose the location for the contents of the zip file to be saved in. Click on 'Extract' (2). 
+Once downloaded, navigate to the downloaded folder in your file system. Click on 'app' to highlight it. From the 'Extract' menu on the top click on 'Extract all' (1) and choose the location for the contents of the zip file to be saved in. Click on 'Extract' (2). 
 
 <img src="imgs/Unzip_files.png" width="600px">
 
