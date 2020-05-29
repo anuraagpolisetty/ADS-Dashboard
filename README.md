@@ -91,11 +91,11 @@ If you want to see your changes, but don't want to actually publish the version 
 #### Google Auth page
 The first time you run the page locally by clicking on"Run app", you should see a pop-up page in the browser for a Google Account sign in. It should look like this. Sign in to 'adscenterdata@gmail.com'. Follow through the next steps and click on 'Allow' to grant Tidyverse API Packages permission. 
 
-<img src="imgs/google_oath_page.png" width="600px">
+<img src="imgs/google_oauth_page.png" width="600px">
 
-<img src="imgs/grant_tidyverse_permission.png" width="600px">
+<img src="imgs/grant_tidyverse_permission.png" width="300px">
 
-<img src="imgs/confirm_permission.png" width="600px">
+<img src="imgs/confirm_permission.png" width="300px">
 
 
 Once you have finished these steps, you can close the browser window and rerun the app to launch the app in browser without any more interruptions. 
