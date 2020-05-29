@@ -85,18 +85,32 @@ Follow along this online video for a tutorial to help with the deployment proces
 
 or use this video for how to publish this app specifically to the ADS Dashboard: https://youtu.be/oCdbAPjAEz8?t=59
 
-**Side-note**: If you want to see your changes, but don't want to actually publish the version to the online site, you can click on the "Run App" button on the top right of the 'server.R' file. It should launch the app in the browser directly so that only you can see your changes. 
+### Additional Notes
+If you want to see your changes, but don't want to actually publish the version to the online site, you can click on the "Run App" button on the top right of the 'server.R' file. It should launch the app in the browser directly so that only you can see your changes. 
+
+#### Google Auth page
+The first time you run the page locally by clicking on"Run app", you should see a pop-up page in the browser for a Google Account sign in. It should look like this. Sign in to 'adscenterdata@gmail.com'. Follow through the next steps and click on 'Allow' to grant Tidyverse API Packages permission. 
+
+<img src="imgs/google_oath_page.png" width="600px">
+
+<img src="imgs/grant_tidyverse_permission.png" width="600px">
+
+<img src="imgs/confirm_permission.png" width="600px">
+
+
+Once you have finished these steps, you can close the browser window and rerun the app to launch the app in browser without any more interruptions. 
+
 
 ### Publish
 
-<img src="imgs/publishing.png" width="500px">
+<img src="imgs/publishing.png" width="600px">
 
 1. In the top right corner of these files, there should be a round bluish icon (figure 1). When you click on the arrow to its right, click the Publish Application button. 
 2. It will then prompt you to install the required packages needed to publish. Click Yes.
 3. Next a Publish to Server pop up will appear. Here you will click the Add New Account link in the top right part of the screen.
 4. Pick the ShinyApps.io
 
-<img src="imgs/pick_shiny_apps_io.png" width="300px">
+<img src="imgs/pick_shiny_apps_io.png" width="400px">
 
 5. Now we must get the secret key to paste into the text box. Here you can follow the steps below, or try the already generated <details> <summary>key:</summary> rsconnect::setAccountInfo(name='adscenters',
 			  token='7557947F76FE11F9A4ED09991C85B528',
@@ -121,7 +135,9 @@ After about 5 minutes, the app should be published with all the changes you have
 Once the page has been published, the url will remain the same as long as you designate the title to be dashboard. If not, the url will differ with the title change:
 
     - adscenters.shinyapps.io/[TITLE_GIVEN]/
-
+    
+    
+    
   
 
 
