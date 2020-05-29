@@ -98,9 +98,9 @@ or use this video for how to publish this app specifically to the ADS Dashboard:
 
 <img src="imgs/pick_shiny_apps_io.png" width="300px">
 
-5. Now we must get the secret key to paste into the text box. Here you can follow the steps below, or try the already generated <details> <summary>key:</summary> (rsconnect::setAccountInfo(name='adscenters',
+5. Now we must get the secret key to paste into the text box. Here you can follow the steps below, or try the already generated <details> <summary>key:</summary> rsconnect::setAccountInfo(name='adscenters',
 			  token='7557947F76FE11F9A4ED09991C85B528',
-			  secret='4am+/2rBfNN1r/pXDgHAjsEsGTn0eUCA9M5NPkv9'))</details>
+			  secret='4am+/2rBfNN1r/pXDgHAjsEsGTn0eUCA9M5NPkv9')</details>
 
 6.  * Log into shinyapps.io
     * Login: adscenterdata@gmail.com
