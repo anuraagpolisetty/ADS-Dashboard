@@ -6,14 +6,19 @@ library(googlesheets4)
 # data <- final_data
 # data <- read.csv(file="./data/TOTAL.csv", stringsAsFactors=FALSE)
 
-drive_auth(cache = ".secrets", email = TRUE)
-gs4_auth(token = drive_token())
 
-total <- drive_get("total")
-total_id <- unclass(as_sheets_id(total))
-total_data <- range_speedread(total_id)
-# View(total_data)
-data <- data.frame(total_data)
+
+# drive_auth(cache = ".secrets", email = TRUE)
+# gs4_auth(token = drive_token())
+# 
+# total <- drive_get("total")
+# total_id <- unclass(as_sheets_id(total))
+# total_data <- range_speedread(total_id)
+# # View(total_data)
+# data <- data.frame(total_data)
+data <- getData()
+
+
 
 # Gets the data ready for a single center
 #data_single_center <- data %>% filter(SiteID == 'ACRS')
@@ -40,6 +45,41 @@ for (question in questions) {
   cleaned_data[cleaned_data[question] == 'Most of the Time',question] <- '3'
   cleaned_data[question] <- as.numeric(cleaned_data[[question]])
   
+}
+
+getData <- function() {
+  drive_auth(cache = ".secrets", email = TRUE)
+  gs4_auth(token = drive_token())
+  
+  total <- drive_get("total")
+  total_id <- unclass(as_sheets_id(total))
+  total_data <- range_speedread(total_id)
+  # View(total_data)
+  data <- data.frame(total_data)
+  return(data)
+}
+
+getCleanedData <- function() {
+  tempData <- data
+  # Gets the data ready for a single center
+  cleaned_data <- tempData
+  # Clean the data for the visuals
+  
+  column.names <- names(cleaned_data)
+  questions <- column.names[4:17]
+  
+  
+  for (question in questions) {
+    cleaned_data[is.na(cleaned_data[question]), question] <- '0'
+    cleaned_data[cleaned_data[question] == 'Not Applicable',question] <- '0'
+    cleaned_data[cleaned_data[question] == 'Almost Never',question] <- '1'
+    cleaned_data[cleaned_data[question] == 'Sometimes',question] <- '2'
+    cleaned_data[cleaned_data[question] == 'Most of the Time',question] <- '3'
+    cleaned_data[question] <- as.numeric(cleaned_data[[question]])
+  }
+  
+  return (cleaned_data)
+    
 }
 
 
