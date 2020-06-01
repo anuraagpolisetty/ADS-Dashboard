@@ -59,10 +59,10 @@ getData <- function() {
   return(data)
 }
 
-getCleanedData <- function() {
-  tempData <- data
+getCleanedData <- function(data) {
+  # tempData <- data
   # Gets the data ready for a single center
-  cleaned_data <- tempData
+  cleaned_data <- data
   # Clean the data for the visuals
   
   column.names <- names(cleaned_data)

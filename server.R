@@ -24,71 +24,51 @@ labelMandatory <- function(label) {
   )
 }
 
-# last_updated <- reactiveVal(as.Date("1970-01-01"))
-
 grouped.data <- data %>% group_by(SiteID) %>% summarise(count=n())
 batches.inputted <- data %>% group_by(Batch) %>% summarise(count=n())
 
-# data <- reactiveValues()
+reactive_data <- reactiveValues()
 
 function(input, output, session) {
   
-  # data <- reactivePoll(10000, session, 
-  #            checkFunc = function() {
-  #              drive_auth(cache = ".secrets", email = TRUE)
-  #              gs4_auth(token = drive_token())
-  #              
-  #              total <- drive_get("total")
-  #              total_id <- unclass(as_sheets_id(total))
-  #              total_data <- range_speedread(total_id)
-  #              # View(total_data)
-  #              temp <- data.frame(total_data)
-  #              return (length(temp) == length(data))
-  #            },
-  #            getData)    
-  # 
-  # cleaned_data <- reactivePoll(10000, session, 
-  #                checkFunc = function() {
-  #                  drive_auth(cache = ".secrets", email = TRUE)
-  #                  gs4_auth(token = drive_token())
-  #                  
-  #                  total <- drive_get("total")
-  #                  total_id <- unclass(as_sheets_id(total))
-  #                  total_data <- range_speedread(total_id)
-  #                  # View(total_data)
-  #                  temp <- data.frame(total_data)
-  #                  return (length(temp) == length(data))
-  #                },    
-  #                getCleanedData)    
+  data <- reactivePoll(10000, session,
+             checkFunc = function() {
+               drive_auth(cache = ".secrets", email = TRUE)
+               gs4_auth(token = drive_token())
+
+               total <- drive_get("total")
+               total_id <- unclass(as_sheets_id(total))
+               total_data <- range_speedread(total_id)
+               temp <- data.frame(total_data)
+               
+               
+               return (last(temp)$Date)
+             },
+             valueFunc = function() {
+               return(getData())
+             })
   
-  # observe({
-  #   
-  #   last_sheet_updated <- gs4_get("total") # look up google sheet last updated time
-  #   if ( isolate(last_updated()) - last_sheet_updated < 0) {
-  #     # set the last updated time
-  #     isolate(last_updated(last_sheet_updated))
-  #     # update the browser
-  #     update_user_table_method() # must be created
-  #   }
-  #   
-  #   # Test again in k seconds
-  #   invalidateLater(k * 1000)
-  # })
-  # 
-  # data <- reactive({
-  #     invalidateLater(10000,session)
-  #     
-  #     getData()
-  #   })
-  # 
-  # # data <- dataTableOutput(data)
-  # 
-  # cleaned_data <- reactive({
-  #     invalidateLater(10000, session)
-  #     getCleanedData()
-  # })
+  data <- isolate(data())
   
-  # cleaned_data <- dataTableOutput(cleaned_data)
+  cleaned_data <- reactivePoll(10000, session,
+               checkFunc = function(data) {
+                 drive_auth(cache = ".secrets", email = TRUE)
+                 gs4_auth(token = drive_token())
+                 
+                 total <- drive_get("total")
+                 total_id <- unclass(as_sheets_id(total))
+                 total_data <- range_speedread(total_id)
+                 temp <- data.frame(total_data)
+                 
+                 
+                 return (last(temp)$Date)
+               },
+               valueFunc = function() {
+                 return(getCleanedData(data))
+                       })
+  
+  cleaned_data <- isolate(cleaned_data())
+
 
   output$SingleCenters <- renderUI({
     subCenters <- lapply(1:length(centers), function(k) {
